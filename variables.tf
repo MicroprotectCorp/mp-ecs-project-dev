@@ -12,7 +12,7 @@ variable "vpc_id" {
   default = "vpc-0b359cce648812a01"
 }
 variable "subnet_ids" {
-  default = ["subnet-03dce5558067b25aa", "subnet-0700b796f53811510"]
+  default = ["subnet-05060cddc1856fd3e", "subnet-0fefc834c9152eab3"]
 }
 variable "cluster_arn" {
   default = "arn:aws:ecs:ap-northeast-2:480758641270:cluster/zzl-apne2-ecs-cluster-dev"
@@ -40,7 +40,7 @@ variable "alb_certificate_arn" {
   default = null
 }
 variable "loadbalancer_sg" {
-  default = "sg-01640e8dd5640ae3b"
+  default = "sg-06c7b94d84668555b"
 }
 variable "tg_health_check" {
   type = object({
@@ -72,7 +72,7 @@ variable "listener_rule_priority" {
 }
 variable "management_sg" {
   type    = string
-  default = "sg-08c45cad807411ebd"
+  default = "sg-04edef1bedb171c8a"
 }
 variable "ecs_sg_ingress_rules" {
   description = "List of ingress rules for the ECS security group"
