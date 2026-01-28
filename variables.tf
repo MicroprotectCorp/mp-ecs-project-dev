@@ -9,7 +9,7 @@ variable "mp_environment" {
   default = "dev"
 }
 variable "vpc_id" {
-  default = "vpc-06e254347e7bdbc40"
+  default = "vpc-0b359cce648812a01"
 }
 variable "subnet_ids" {
   default = ["subnet-03dce5558067b25aa", "subnet-0700b796f53811510"]
