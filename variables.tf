@@ -103,6 +103,11 @@ variable "enable_execute_command" {
   type    = bool
 }
 
+variable "platform_version" {
+  type    = string
+  default = "LATEST"
+}
+
 variable "tg_stickiness" {
   type = object({
     enabled         = bool

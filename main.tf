@@ -198,7 +198,7 @@ resource "aws_ecs_service" "mp_ecs_service" {
   # iam_role                           = "/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
   launch_type         = "FARGATE"
   name                = join("-", ["${var.mp_project}", "${var.mp_region}", lower("${var.application_name}"), "ecs-svc", "${var.mp_environment}"])
-  platform_version    = "LATEST"
+  platform_version    = var.platform_version
   propagate_tags      = "SERVICE"
   scheduling_strategy = "REPLICA"
   tags = {
