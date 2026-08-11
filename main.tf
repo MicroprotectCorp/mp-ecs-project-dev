@@ -134,7 +134,7 @@ resource "aws_ecs_task_definition" "mp_ecs_service_taskdef" {
     Owner       = "mp"
     Project     = var.application_name
   }
-  task_role_arn = "arn:aws:iam::${local.account_id}:role/ecsTaskExecutionRole"
+  task_role_arn = var.task_role_arn != null ? var.task_role_arn : "arn:aws:iam::${local.account_id}:role/ecsTaskExecutionRole"
   runtime_platform {
     cpu_architecture        = "X86_64"
     operating_system_family = "LINUX"

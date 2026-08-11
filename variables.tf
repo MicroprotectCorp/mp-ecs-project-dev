@@ -108,6 +108,11 @@ variable "platform_version" {
   default = "LATEST"
 }
 
+variable "task_role_arn" {
+  type    = string
+  default = null
+}
+
 variable "tg_stickiness" {
   type = object({
     enabled         = bool
