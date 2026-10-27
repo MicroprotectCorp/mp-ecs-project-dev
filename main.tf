@@ -121,7 +121,7 @@ resource "aws_ecs_task_definition" "mp_ecs_service_taskdef" {
     }
   ])
   cpu                      = "1024"
-  execution_role_arn       = "arn:aws:iam::${local.account_id}:role/ecsTaskExecutionRole"
+  execution_role_arn       = var.execution_role_arn != null ? var.execution_role_arn : "arn:aws:iam::${local.account_id}:role/ecsTaskExecutionRole"
   ipc_mode                 = null
   memory                   = "3072"
   network_mode             = "awsvpc"

@@ -108,6 +108,11 @@ variable "platform_version" {
   default = "LATEST"
 }
 
+variable "execution_role_arn" {
+  type    = string
+  default = null
+}
+
 variable "task_role_arn" {
   type    = string
   default = null
